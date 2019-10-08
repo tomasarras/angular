@@ -1,0 +1,35 @@
+<table>
+    <thead>
+        <tr>
+            <td>{{titulos.name}}</td>
+            <td>{{titulos.description}}</td>
+            <td>{{titulos.stock}}</td>
+            <td>{{titulos.precio}}</td>
+            <td>{{titulos.imagen}}</td>
+            <td>{{titulos.cantidad}}</td>
+            <td>{{titulos.oferta}}</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cerveza of cervezas" [ngClass]="{ 'verde': cerveza.stock }">
+            <td>{{cerveza.name}}</td>
+            <td>{{cerveza.description}}</td>
+            <td>{{cerveza.stock}}</td>
+            <td>{{cerveza.precio}}</td>
+            <td>{{cerveza.imagen}}</td>
+            <td>
+                <span *ngIf="cerveza.stock == 0">Agotado</span>
+
+                <span *ngIf="cerveza.stock > 0">
+                    <button (click)="sumarCantidad(cerveza)">-</button>
+                    <input type="text" [(ngModel)]="cerveza.stock" (keypress)="soloNumeros($event)">
+                    <button (click)="restarCantidad(cerveza)">+</button>
+                </span>
+            </td>
+            <td>
+                <span *ngIf="cerveza.stock">Si</span>
+                <span *ngIf="!cerveza.stock">No</span>
+            </td>
+        </tr>
+    </tbody>
+</table>

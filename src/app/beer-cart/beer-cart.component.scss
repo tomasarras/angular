@@ -1,0 +1,43 @@
+th,td{
+    text-align: center;
+}
+
+td {
+    color: black;
+    padding:20px;
+}
+
+tr {
+    background: lightblue;
+}
+
+.verde{
+    background-color: lightgreen;
+}
+
+tr input {
+    width: 20%;
+    margin: 0 1% 0 1%;
+}
+
+.table th {
+    border-top: none;
+}
+
+thead td:last-of-type { border-radius: 0 15px 0 0; }
+
+thead td:first-of-type{ border-radius: 15px 0 0 0; }
+
+.table thead th {
+    vertical-align: middle;
+    border-bottom: none;
+    border-top: none;
+}
+
+tbody tr:last-of-type td:last-of-type{ border-radius: 0 0 15px 0; }
+
+tbody tr:last-of-type td:first-of-type{ border-radius: 0 0 0 15px; }
+
+h2{
+    text-align: center;
+}
