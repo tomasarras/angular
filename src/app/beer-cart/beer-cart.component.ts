@@ -27,9 +27,16 @@ export class BeerCartComponent implements OnInit {
 
   public cantidad: number = 0;
   
-  sumarCantidad(cantidad,cerveza){
-    cantidad = cantidad +1;
-    
+  sumarCantidad(cerveza){
+    if (cerveza.stock > this.cantidad){
+      this.cantidad = this.cantidad +1;
+    }
+  }
+
+  restarCantidad(){
+    if (this.cantidad > 0){
+      this.cantidad = this.cantidad -1;
+    }
   }
 
   soloNumeros(event){

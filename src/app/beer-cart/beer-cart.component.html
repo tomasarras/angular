@@ -21,9 +21,9 @@
                 <span *ngIf="cerveza.stock == 0">Agotado</span>
 
                 <span *ngIf="cerveza.stock > 0">
-                    <button (click)="sumarCantidad(cerveza)">-</button>
-                    <input type="text" [(ngModel)]="cerveza.stock" (keypress)="soloNumeros($event)">
-                    <button (click)="restarCantidad(cerveza)">+</button>
+                    <button (click)="restarCantidad(cerveza)">-</button>
+                    <input type="text" [(ngModel)]="cantidad" (keypress)="soloNumeros($event)">
+                    <button (click)="sumarCantidad(cerveza)">+</button>
                 </span>
             </td>
             <td>

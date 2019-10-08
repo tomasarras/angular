@@ -18,5 +18,15 @@ export const BEERS : Beer[] = [
       imagen: "...",
       oferta: false
 
+    },
+    {
+      name: "porter",
+      description : "negra",
+      precio: 50,
+      stock: 6,
+      imagen: "...",
+      oferta: false
+
     }
+
   ]
