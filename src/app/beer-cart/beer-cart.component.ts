@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Beer } from './beer';
-import { BEERS } from './mocks';
+import { BeerDataService } from '../beer-data.service';
 
 @Component({
   selector: 'app-beer-cart',
@@ -8,6 +8,9 @@ import { BEERS } from './mocks';
   styleUrls: ['./beer-cart.component.scss']
 })
 export class BeerCartComponent implements OnInit {
+  beers: Beer[];
+
+  
 
   public titulos: any = {
     name : 'Nombre',
@@ -51,7 +54,8 @@ export class BeerCartComponent implements OnInit {
    }
 
   ngOnInit() {
-    this.cervezas = BEERS;
+    let beerdataservice = new BeerDataService();
+    this.beers = beerdataservice.getBeers();
   }
 
 }

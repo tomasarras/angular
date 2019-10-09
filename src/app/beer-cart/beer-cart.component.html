@@ -11,7 +11,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let cerveza of cervezas" [ngClass]="{ 'verde': cerveza.stock }">
+        <tr *ngFor="let cerveza of cervezas" [ngClass]="{ 'verde': cerveza.stock, 'rojo': !cerveza.stock }">
             <td>{{cerveza.name}}</td>
             <td>{{cerveza.description}}</td>
             <td>{{cerveza.stock}}</td>
@@ -20,9 +20,9 @@
             <td>
                 <span *ngIf="cerveza.stock == 0">Agotado</span>
 
-                <span *ngIf="cerveza.stock > 0">
+                <span *ngIf="cerveza.stock > 0" class="btns-cerveza">
                     <button (click)="restarCantidad(cerveza)">-</button>
-                    <input type="text" [(ngModel)]="cantidad" (keypress)="soloNumeros($event)">
+                    <input type="text" [(ngModel)]="cantidadd" (keypress)="soloNumeros($event)">
                     <button (click)="sumarCantidad(cerveza)">+</button>
                 </span>
             </td>

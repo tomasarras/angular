@@ -8,6 +8,7 @@ import { NavComponent } from './nav/nav.component';
 import { BeerListComponent } from './beer-list/beer-list.component';
 import { BeerCartComponent } from './beer-cart/beer-cart.component';
 import { AppFooterComponent } from './app-footer/app-footer.component';
+import { BreweryAboutComponent } from './brewery-about/brewery-about.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AppFooterComponent } from './app-footer/app-footer.component';
     NavComponent,
     BeerListComponent,
     BeerCartComponent,
-    AppFooterComponent
+    AppFooterComponent,
+    BreweryAboutComponent
   ],
   imports: [
     BrowserModule,

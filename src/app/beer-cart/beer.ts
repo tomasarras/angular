@@ -5,8 +5,4 @@ export class Beer {
     public imagen : string;
     public stock : number;
     public oferta: boolean;
-
-    constructor(){
-
-    }
 }
