@@ -1,0 +1,99 @@
+tr button:disabled {
+    background: grey;
+}
+
+.btns-cerveza {
+    display: flex;
+    flex-direction: row;
+}
+
+.rojo {
+    background-color:#FC6E20;
+}
+
+.verde {
+    background-color: lightgreen;
+}
+
+tr input {
+    width: 80px;
+    margin: 0 1% 0 1%;
+    padding: 10px 0;
+    text-align: center;
+}
+
+tr button {
+    background: #F857A6;
+    background:-webkit-linear-gradient(to right,#ff5858,#f857a6);
+    background:linear-gradient(to right,#ff5858,#f857a6);
+    color: white;
+    padding: 10px 30px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px -2px rgba(0, 0, 0, .25);
+}
+
+@media only screen and (max-width:1310px){
+
+    td {
+        font-size: 0.8em;
+    }
+
+    tr button {
+        padding: 10px 20px;
+    }
+
+    tr input {
+        width: 40px;
+    }
+
+}
+
+@media only screen and (max-width:1100px){
+    td {
+        font-size: 1em;
+    }
+}
+
+@media only screen and (max-width:850px){
+    td {
+        font-size: 0.8em;
+    }
+}
+
+@media only screen and (max-width:740px){
+
+    tr button {
+        padding: 0 5px;
+        border-radius: 5px;
+        box-shadow: 0 10px 10px -2px rgba(0, 0, 0, .25);
+    }
+
+    tr input {
+        width: 20px;
+    }
+    
+    td {
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 580px){
+    td {
+        font-size: 0.6em;
+    }
+
+    td {
+        padding: 5px;
+    }
+
+    tr button, tr input {
+        height: 30px;
+    }
+
+}
+
+@media only screen and (max-width: 430px){
+    td {
+        padding: 0;
+    }
+}

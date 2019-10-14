@@ -1,6 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
-
-* {
+*{
     margin: 0;
-    padding: 0;
 }
+
+thead tr td {
+    font-weight: bold;
+}
+
+th, td {
+    text-align: center;
+    color: black;
+    padding: 15px;
+}
+
+tr {
+    background: lightblue;
+}
+
+/*Borde de tablas*/
+thead td:first-of-type{ border-radius: 15px 0 0 0; }
+thead td:last-of-type { border-radius: 0 15px 0 0; }
+tbody tr:last-of-type td:last-of-type{ border-radius: 0 0 15px 0; }
+tbody tr:last-of-type td:first-of-type{ border-radius: 0 0 0 15px; }

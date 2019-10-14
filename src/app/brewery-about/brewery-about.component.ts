@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BreweryAboutComponent implements OnInit {
 
+  public titulos: object = {
+    nombre: "Tomas",
+    direccion: "123",
+    email: "email@gmail.com"
+  }
+
   constructor() { }
 
   ngOnInit() {

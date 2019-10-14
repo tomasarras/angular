@@ -1,0 +1,64 @@
+footer {
+    background-color: lightblue;
+    padding: 0 30%;
+    border-radius: 15px 15px 0 0;
+}
+
+.icons {
+    border-bottom: 2px solid #3ba9f4;
+    box-shadow: 0 1px 0 #0b75be;
+    padding: 2% 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icons i.fab {
+    font-size: 50px;
+}
+
+.icons .fab:hover {
+    transform: rotate3d(0, 0, 0, 0deg);
+}
+
+.icons .fab {
+  display: inline-block;
+  font-size: 100px;
+  color: #3ba9f4;
+  position: relative;
+  cursor: pointer;
+  text-shadow: 2px 4px 0 #0b75be;
+  transform: rotate3d(1, 0, 0, 35deg);
+  transform-origin: 50% 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.icons .fab:hover {
+  transform: rotate3d(0, 0, 0, 0deg);
+}
+
+@media only screen and (max-width: 800px) {
+    footer {
+        padding: 0 20%;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    footer {
+        padding: 0;
+    }
+
+    .icon {
+        height: 40px;
+        width: 40px;
+    }
+
+    .icons .fab {
+        transform: rotate3d(1, 0, 0, 0deg);
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .icons i.fab {
+        font-size: 35px;
+    }
+}

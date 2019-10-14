@@ -1,1 +1,36 @@
-<p>beer-list works!</p>
+<table>
+    <thead>
+        <tr>
+            <td>{{titulos.name}}</td>
+            <td>{{titulos.description}}</td>
+            <td>{{titulos.stock}}</td>
+            <td>{{titulos.precio}}</td>
+            <td>{{titulos.imagen}}</td>
+            <td>{{titulos.cantidad}}</td>
+            <td>{{titulos.oferta}}</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cerveza of cervezas" [ngClass]="{ 'verde': cerveza.stock, 'rojo': !cerveza.stock }">
+            <td>{{cerveza.name}}</td>
+            <td>{{cerveza.description}}</td>
+            <td>{{cerveza.stock}}</td>
+            <td>${{cerveza.precio}}</td>
+            <td>{{cerveza.imagen}}</td>
+            <td>
+                <span *ngIf="cerveza.stock == 0">Agotado</span>
+
+                <span *ngIf="cerveza.stock > 0" class="btns-cerveza">
+                    <button (click)="restarCantidad(cantidadCerveza)" [disabled]="cantidadCerveza.value == 0">-</button>
+                    <!--<input type="text" [(ngModel)]="cerveza.cantidad" #cantidadCerveza (keypress)="soloNumeros($event,cantidadCerveza.value,cerveza.stock)">-->
+                    <input type="text" value="0" #cantidadCerveza (keypress)="soloNumerosValidos($event,cantidadCerveza.value,cerveza.stock)">
+                    <button (click)="sumarCantidad(cerveza,cantidadCerveza)">+</button>
+                </span>
+            </td>
+            <td>
+                <span *ngIf="cerveza.oferta">Si</span>
+                <span *ngIf="!cerveza.oferta">No</span>
+            </td>
+        </tr>
+    </tbody>
+</table>
